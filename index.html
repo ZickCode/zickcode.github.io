@@ -40,64 +40,64 @@
    			</div>
    		</div>
   		<div class="loadingBox">
-  			<img src="webapp/images/loading2.gif" />
+  			<img src="webapp/images/loading.gif" />
   			<p>正在努力登陆中~</p>
   		</div>
    		</form>
    	</div>
   </body>
-  <script src="../js/3rdlib/seajs-3.0.0/sea.js"></script>
+  <script src="../js/3rdlib/jquery-2.0.0.min.js"></script>
   <script>
-			$(function(){
-				function validate(){
-					var username = $.trim($('#userName').val());
-					var pwd = $.trim($('#password').val());
-					var mobile = /^0{0,1}(13[0-9]|15[7-9]|153|156|18[7-9])[0-9]{8}$/;
-					if(username.length ==0){
-						$('.validateBox>div>p').text('请输入帐号!');
-						$('.validateBox').hide().removeClass('pwd').fadeIn();
-						return false;
-					}else if(username.length !=0 && !mobile.test(username)){
-						$('.validateBox>div>p').text('手机号格式错误!');
-						$('.validateBox').hide().removeClass('pwd').fadeIn();
-						return false;
-					}else if(pwd.length == 0){
-						$('.validateBox>div>p').text('请输入密码!');
-						$('.validateBox').hide().addClass('pwd').fadeIn();
-						return false;				
-					}
-					return true;
-				}
-				$('#loginBtn').click(function(){
-					if(validate()){
-						<%-- $.ajax({
-							type: 'POST',
-							url: '<%=basePath%>login',
-							data:{'username':$.trim($('#userName').val()),'password':$.trim($('#password').val())},
-							dataType: 'json',
-							success: function(data){
-								if(data.flag == 0){
-									$('.loginErrorBox').hide().fadeIn();
-								}else if(data.flag == 1){
-									$('.loginBox').hide();
-									$('.loadingBox').fadeIn();
-									window.setTimeout("window.location = 'webapp/views/ .jsp'",2000);
-								}
-							}					
-						}); 
-						var url = '<%=basePath%>login';
-						var data = {'username':$.trim($('#userName').val()),'password':$.trim($('#password').val())};				
-						$.post(url,data,function(data){
-							if(data.flag == 0){
-		            $('.loginErrorBox').hide().fadeIn();
-		          }else if(data.flag == 1){
-		            $('.loginBox').hide();
-		            $('.loadingBox').fadeIn();
-		            window.setTimeout("window.location = 'webapp/views/mainPage.jsp'",2000);
-		          }
-						},'json');--%>
-					}
-				});
-			})
+	$(function(){
+		function validate(){
+			var username = $.trim($('#userName').val());
+			var pwd = $.trim($('#password').val());
+			var mobile = /^0{0,1}(13[0-9]|15[7-9]|153|156|18[7-9])[0-9]{8}$/;
+			if(username.length ==0){
+				$('.validateBox>div>p').text('请输入帐号!');
+				$('.validateBox').hide().removeClass('pwd').fadeIn();
+				return false;
+			}else if(username.length !=0 && !mobile.test(username)){
+				$('.validateBox>div>p').text('手机号格式错误!');
+				$('.validateBox').hide().removeClass('pwd').fadeIn();
+				return false;
+			}else if(pwd.length == 0){
+				$('.validateBox>div>p').text('请输入密码!');
+				$('.validateBox').hide().addClass('pwd').fadeIn();
+				return false;				
+			}
+			return true;
+		}
+		$('#loginBtn').click(function(){
+			if(validate()){
+				<%-- $.ajax({
+					type: 'POST',
+					url: '<%=basePath%>login',
+					data:{'username':$.trim($('#userName').val()),'password':$.trim($('#password').val())},
+					dataType: 'json',
+					success: function(data){
+						if(data.flag == 0){
+							$('.loginErrorBox').hide().fadeIn();
+						}else if(data.flag == 1){
+							$('.loginBox').hide();
+							$('.loadingBox').fadeIn();
+							window.setTimeout("window.location = 'webapp/views/ .jsp'",2000);
+						}
+					}					
+				}); 
+				var url = '<%=basePath%>login';
+				var data = {'username':$.trim($('#userName').val()),'password':$.trim($('#password').val())};				
+				$.post(url,data,function(data){
+					if(data.flag == 0){
+            $('.loginErrorBox').hide().fadeIn();
+          }else if(data.flag == 1){
+            $('.loginBox').hide();
+            $('.loadingBox').fadeIn();
+            window.setTimeout("window.location = 'webapp/views/mainPage.jsp'",2000);
+          }
+				},'json');--%>
+			}
+		});
+	})
     </script>
 </html>
