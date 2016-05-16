@@ -52,7 +52,7 @@
 		function validate(){
 			var username = $.trim($('#userName').val());
 			var pwd = $.trim($('#password').val());
-			var mobile = /^0{0,1}(13[0-9]|15[7-9]|153|156|18[7-9])[0-9]{8}$/;
+			var mobile = /^0{0,1}(13[0-9]|15[7-9]|153|156|18[0-9])[0-9]{8}$/;
 			if(username.length ==0){
 				$('.validateBox>div>p').text('请输入帐号!');
 				$('.validateBox').hide().removeClass('pwd').fadeIn();
