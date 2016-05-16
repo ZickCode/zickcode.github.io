@@ -40,7 +40,7 @@
    			</div>
    		</div>
   		<div class="loadingBox">
-  			<img src="webapp/images/loading.gif" />
+  			<img src="../images/loading.gif" />
   			<p>正在努力登陆中~</p>
   		</div>
    		</form>
@@ -70,7 +70,7 @@
 		}
 		$('#loginBtn').click(function(){
 			if(validate()){
-				<%-- $.ajax({
+				/* $.ajax({
 					type: 'POST',
 					url: '<%=basePath%>login',
 					data:{'username':$.trim($('#userName').val()),'password':$.trim($('#password').val())},
@@ -95,7 +95,7 @@
             $('.loadingBox').fadeIn();
             window.setTimeout("window.location = 'webapp/views/mainPage.jsp'",2000);
           }
-				},'json');--%>
+				},'json'); */
 			}
 		});
 	})
