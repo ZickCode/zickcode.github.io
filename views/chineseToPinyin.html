@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>chineseToPinyin</title>
+	</head>
+	<body>
+		<p>Chinese To Pinyin</p>
+		<input type="text" class="box" value="" />		
+		<input type="button" value="change" id="btn">
+		<input type="text" class="box1" />
+	</body>
+	<script type="text/javascript" src="../js/3rdlib/jquery-2.0.0.min.js" ></script>
+	<script type="text/javascript" src="../js/project/pinyin.js" ></script>
+	<script type="text/javascript">
+		$('#btn').click(function(){
+			var text1 = $('.box').val();
+			text1 = codefans_net_CC2PY(text1);
+			$('.box1').val(text1);
+		})
+	</script>
+</html>
