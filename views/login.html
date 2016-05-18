@@ -65,6 +65,8 @@
 				$('.validateBox>div>p').text('请输入密码!');
 				$('.validateBox').hide().addClass('pwd').fadeIn();
 				return false;				
+			}else if(pwd != '123456'){
+				return false;
 			}
 			return true;
 		}
