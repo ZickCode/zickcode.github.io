@@ -33,7 +33,7 @@
 					<li class="sequence-nav-button sequence-prev">
 						<img src="../images/bt-prev.png" alt="&lt;">
 					</li>
-					<li class="sequence-nav-caption">Dear Baby</li>
+					<li class="sequence-nav-caption">Dear Baby<br />亲爱的宝宝</li>
 					<li class="sequence-nav-button sequence-next">
 						<img src="../images/bt-next.png" alt="&gt;">
 					</li>
@@ -43,7 +43,7 @@
 	<script type="text/javascript" src="../js/3rdlib/jquery-2.0.0.min.js"></script>
 	<script type="text/javascript" src="../js/3rdlib/jquery.sequence-min.js"></script>
 	<script type="text/javascript">
-	window.onload = function() {
+	$(document).ready(function() {
 	
 	    // var frames = ;
 	
@@ -107,7 +107,7 @@
 	        sequence.nextFrameID = frameID;
 	        sequence.goTo(frameID);
 	    });
-	};
+	});
 	</script>
 	</body>
 </html>
