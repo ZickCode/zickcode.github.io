@@ -1,0 +1,296 @@
+/*
+Theme created for use with Sequence.js (http://www.sequencejs.com/)
+
+Theme: Photo Stack
+Version: 1.2
+Theme Author: Ian Lunn @IanLunn
+Author URL: http://www.ianlunn.co.uk/
+Theme URL: http://www.sequencejs.com/themes/photo-stack/
+
+This is a PREMIUM theme and is available under the following license:
+http://sequencejs.com/developers/license-information/#premium
+
+Sequence.js and its dependencies are (c) Ian Lunn Design 2012 unless otherwise stated.
+*/
+/* CSS RESET - http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 */
+/* line 14, /Users/Ian/Sites/sequence-themes/themes/photo-stack/scss/partials/reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+/* line 24, /Users/Ian/Sites/sequence-themes/themes/photo-stack/scss/partials/reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+/* line 27, /Users/Ian/Sites/sequence-themes/themes/photo-stack/scss/partials/reset.scss */
+html,body{height: 100%;}
+body {
+  line-height: 1; }
+
+/* line 30, /Users/Ian/Sites/sequence-themes/themes/photo-stack/scss/partials/reset.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 33, /Users/Ian/Sites/sequence-themes/themes/photo-stack/scss/partials/reset.scss */
+blockquote, q {
+  quotes: none; }
+
+/* line 37, /Users/Ian/Sites/sequence-themes/themes/photo-stack/scss/partials/reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/* line 41, /Users/Ian/Sites/sequence-themes/themes/photo-stack/scss/partials/reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* !CSS RESET */
+/* prefix declarations */
+/* line 32, /Users/Ian/Sites/sequence-themes/themes/photo-stack/scss/sequencejs-theme.photo-stack.scss */
+#sequence-theme {
+  background-repeat: repeat;
+  background-color: #38393B;
+  height: 100%;
+  overflow: hidden;
+  /* hide animated elements as they'll go beyond the Sequence container */
+  width: 100%; }
+
+/* THEME STYLES */
+/* line 43, /Users/Ian/Sites/sequence-themes/themes/photo-stack/scss/sequencejs-theme.photo-stack.scss */
+#sequence.sequence-fallback {
+  /* in browsers that don't support CSS3 (such as IE8 & 9), hide the overflow and fix the height */
+  overflow: hidden;
+  background: none !important;
+  height: 600px !important; }
+  /* line 48, /Users/Ian/Sites/sequence-themes/themes/photo-stack/scss/sequencejs-theme.photo-stack.scss */
+  #sequence.sequence-fallback .nav {
+    bottom: 60px !important;
+    top: auto; }
+
+/* line 54, /Users/Ian/Sites/sequence-themes/themes/photo-stack/scss/sequencejs-theme.photo-stack.scss */
+#sequence {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 654px;
+  position: relative;
+  width: 98%; }
+  /* line 65, /Users/Ian/Sites/sequence-themes/themes/photo-stack/scss/sequencejs-theme.photo-stack.scss */
+  #sequence > .sequence-canvas {
+    height: 100%;
+    width: 100%; }
+  /* line 70, /Users/Ian/Sites/sequence-themes/themes/photo-stack/scss/sequencejs-theme.photo-stack.scss */
+  #sequence > .sequence-canvas > li {
+    /* make each Sequence frame 100% of the container */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1; }
+  /* line 77, /Users/Ian/Sites/sequence-themes/themes/photo-stack/scss/sequencejs-theme.photo-stack.scss */
+  #sequence > .sequence-canvas li > * {
+    /* make all animated elements position absolute so their left/right/top/bottom can be manipulated */
+    position: absolute; }
+  /* line 81, /Users/Ian/Sites/sequence-themes/themes/photo-stack/scss/sequencejs-theme.photo-stack.scss */
+  #sequence > .sequence-canvas {
+    /* FRAME ANIMATION STYLES */
+    /*END OF FRAME ANIMATION STYLES*/ }
+    /* line 84, /Users/Ian/Sites/sequence-themes/themes/photo-stack/scss/sequencejs-theme.photo-stack.scss */
+    #sequence > .sequence-canvas > li:nth-child(1) img {
+      /* animate-out position for first image */
+      left: -110%;
+      top: -13%;
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg); }
+    /* line 90, /Users/Ian/Sites/sequence-themes/themes/photo-stack/scss/sequencejs-theme.photo-stack.scss */
+    #sequence > .sequence-canvas > li:nth-child(2) img {
+      /* animate-out position for second image */
+      left: 136%;
+      top: -15%;
+      -webkit-transform: rotate(40deg);
+      -moz-transform: rotate(40deg);
+      -ms-transform: rotate(40deg);
+      -o-transform: rotate(40deg);
+      transform: rotate(40deg); }
+    /* line 96, /Users/Ian/Sites/sequence-themes/themes/photo-stack/scss/sequencejs-theme.photo-stack.scss */
+    #sequence > .sequence-canvas > li:nth-child(3) img {
+      /* animate-out position for third image */
+      left: -86%;
+      top: -46%;
+      -webkit-transform: rotate(-12deg);
+      -moz-transform: rotate(-12deg);
+      -ms-transform: rotate(-12deg);
+      -o-transform: rotate(-12deg);
+      transform: rotate(-12deg); }
+    /* line 102, /Users/Ian/Sites/sequence-themes/themes/photo-stack/scss/sequencejs-theme.photo-stack.scss */
+    #sequence > .sequence-canvas > li:nth-child(4) img {
+      /* animate-out position for fourth image */
+      left: 98%;
+      top: -90%;
+      -webkit-transform: rotate(-12deg);
+      -moz-transform: rotate(-12deg);
+      -ms-transform: rotate(-12deg);
+      -o-transform: rotate(-12deg);
+      transform: rotate(-12deg); }
+    /* line 108, /Users/Ian/Sites/sequence-themes/themes/photo-stack/scss/sequencejs-theme.photo-stack.scss */
+    #sequence > .sequence-canvas > li:nth-child(5) img {
+      /* animate-out position for fifth image */
+      left: 110%;
+      top: 80%;
+      -webkit-transform: rotate(20deg);
+      -moz-transform: rotate(20deg);
+      -ms-transform: rotate(20deg);
+      -o-transform: rotate(20deg);
+      transform: rotate(20deg); }
+    /* line 114, /Users/Ian/Sites/sequence-themes/themes/photo-stack/scss/sequencejs-theme.photo-stack.scss */
+    #sequence > .sequence-canvas > li:nth-child(6) img {
+      /* animate-out position for sixth image */
+      left: -100%;
+      top: 50%;
+      -webkit-transform: rotate(15deg);
+      -moz-transform: rotate(15deg);
+      -ms-transform: rotate(15deg);
+      -o-transform: rotate(15deg);
+      transform: rotate(15deg); }
+    /* line 120, /Users/Ian/Sites/sequence-themes/themes/photo-stack/scss/sequencejs-theme.photo-stack.scss */
+    #sequence > .sequence-canvas > li img {
+      cursor: pointer;
+      -webkit-transition-property: left, top, -webkit-transform, margin-left;
+      -moz-transition-property: left, top, -moz-transform, margin-left;
+      -ms-transition-property: left, top, -ms-transform, margin-left;
+      -o-transition-property: left, top, -o-transform, margin-left;
+      transition-property: left, top, transform, margin-left;
+      -webkit-transition-timing-function: ease-in-out;
+      -moz-transition-timing-function: ease-in-out;
+      -ms-transition-timing-function: ease-in-out;
+      -o-transition-timing-function: ease-in-out;
+      transition-timing-function: ease-in-out;
+      -webkit-transition-duration: 0.8s;
+      -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+      -o-transition-duration: 0.8s;
+      transition-duration: 0.8s;
+      width: 80%;
+      height: auto;
+      box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); }
+    /* line 134, /Users/Ian/Sites/sequence-themes/themes/photo-stack/scss/sequencejs-theme.photo-stack.scss */
+    #sequence > .sequence-canvas > li.animate-in img {
+      /* animate-in position for all images */
+      cursor: default;
+      left: 10%;
+      /* move the image back to the left to center it (because the frame is moved to the left by 50%) */
+      top: 0;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+       }
+  /* line 144, /Users/Ian/Sites/sequence-themes/themes/photo-stack/scss/sequencejs-theme.photo-stack.scss */
+  #sequence .nav {
+    /* Sequence navigation */
+    background: black;
+    background: rgba(30, 30, 30, 0.6);
+    border-radius: 5px;
+    top: -65px;
+    color: white;
+    font-family: Tahoma;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    width: 480px;
+    z-index: 100; }
+    /* line 157, /Users/Ian/Sites/sequence-themes/themes/photo-stack/scss/sequencejs-theme.photo-stack.scss */
+    #sequence .nav li {
+      /* Navigation list items that contain the prev/next button and sequence caption */
+      display: inline-block;
+      *display: inline;
+      vertical-align: middle; }
+    /* line 163, /Users/Ian/Sites/sequence-themes/themes/photo-stack/scss/sequencejs-theme.photo-stack.scss */
+    #sequence .nav .sequence-nav-button {
+      /* Next and previous navigation buttons */
+      cursor: pointer;
+      padding: 10px 0;
+      width: 15%; }
+    /* line 169, /Users/Ian/Sites/sequence-themes/themes/photo-stack/scss/sequencejs-theme.photo-stack.scss */
+    #sequence .nav .sequence-nav-caption {
+      /* Image caption */
+     font-family: "microsoft yahei";
+      height: 21px;
+      padding: 10px 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 65%;
+      white-space: nowrap; }
+
+@media only screen and (max-width: 620px) {
+  /* line 183, /Users/Ian/Sites/sequence-themes/themes/photo-stack/scss/sequencejs-theme.photo-stack.scss */
+  .sequence-canvas > li img {
+    width: 84%; }
+  /* line 187, /Users/Ian/Sites/sequence-themes/themes/photo-stack/scss/sequencejs-theme.photo-stack.scss */
+  .sequence-canvas > li.animate-in img {
+    /* animate-in position for all images */
+    left: 8%;
+    /* move the image back to the left to center it (because the frame is moved to the left by 50%) */ } }
+@media only screen and (max-width: 570px) {
+  /* line 196, /Users/Ian/Sites/sequence-themes/themes/photo-stack/scss/sequencejs-theme.photo-stack.scss */
+  .sequence-canvas > li img {
+    width: 90%; }
+  /* line 200, /Users/Ian/Sites/sequence-themes/themes/photo-stack/scss/sequencejs-theme.photo-stack.scss */
+  .sequence-canvas > li.animate-in img {
+    /* animate-in position for all images */
+    left: 5%;
+    /* move the image back to the left to center it (because the frame is moved to the left by 50%) */ } }
+/*scale the height based on width*/
+@media only screen and (max-width: 500px) {
+  /* line 208, /Users/Ian/Sites/sequence-themes/themes/photo-stack/scss/sequencejs-theme.photo-stack.scss */
+  #sequence-theme {
+    height: 425px; }
+    /* line 211, /Users/Ian/Sites/sequence-themes/themes/photo-stack/scss/sequencejs-theme.photo-stack.scss */
+    #sequence-theme .nav {
+      width: 96%; } }
+@media only screen and (max-width: 450px) {
+  /* line 218, /Users/Ian/Sites/sequence-themes/themes/photo-stack/scss/sequencejs-theme.photo-stack.scss */
+  #sequence-theme {
+    height: 375px; }
+    /* line 221, /Users/Ian/Sites/sequence-themes/themes/photo-stack/scss/sequencejs-theme.photo-stack.scss */
+    #sequence-theme .nav {
+      width: 96%; } }
+@media only screen and (max-width: 400px) {
+  /* line 228, /Users/Ian/Sites/sequence-themes/themes/photo-stack/scss/sequencejs-theme.photo-stack.scss */
+  #sequence-theme {
+    height: 350px; }
+    /* line 231, /Users/Ian/Sites/sequence-themes/themes/photo-stack/scss/sequencejs-theme.photo-stack.scss */
+    #sequence-theme .nav {
+      width: 96%; } }
+@media only screen and (max-width: 320px) {
+  /* line 238, /Users/Ian/Sites/sequence-themes/themes/photo-stack/scss/sequencejs-theme.photo-stack.scss */
+  #sequence-theme {
+    height: 300px; }
+    /* line 241, /Users/Ian/Sites/sequence-themes/themes/photo-stack/scss/sequencejs-theme.photo-stack.scss */
+    #sequence-theme .nav {
+      width: 96%; } }
