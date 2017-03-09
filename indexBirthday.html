@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Happy Birthday</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/css3Login.css" />
+  </head>
+  <body>
+		<div class="htmleaf-container">
+			<div class="wrapper">
+				<div class="container">
+					<h1>Happy Birthday</h1>					
+					<form class="form">
+						<input type="text" placeholder="Please Enter The Code" id="txt">
+						<button type="button" id="login-button">Enter</button>
+					</form>
+				</div>				
+				<ul class="bg-bubbles">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+		</div>	
+	<script src="js/3rdlib/jquery-2.0.0.min.js" type="text/javascript"></script>
+	<script>
+	$('#login-button').click(function() {
+		var _txtVal = $("#txt").val();
+		if(_txtVal == '19930615'){			
+			$('form').fadeOut(500);
+			$('.wrapper').addClass('form-success');
+		}
+	});
+	</script>	
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
