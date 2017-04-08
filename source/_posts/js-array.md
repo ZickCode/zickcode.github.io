@@ -1,7 +1,7 @@
 ---
 title: js数组方法
 date: 2017-04-07 15:21:57
-tags:
+tags: js array
 ---
 
 学习js数组方法的笔记

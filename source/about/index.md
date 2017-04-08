@@ -1,6 +1,11 @@
 ---
-title: About Me
-date: 2017-04-07 14:44:28
+title: about
+date: 2017-04-08 20:07:59
 ---
 
-一个在田地里辛勤劳作的前端码农
+![head](index/index/doge-comic.jpg)
+在我这里是好的，你重启下电脑试试。
+
+Github: https://github.com/ZickCode
+Email: zickcode@foxmail.com
+QQ: 515488533
