@@ -24,6 +24,7 @@ css合并为两个文件：main.css，plugins.css，
 js合并为三个文件：页面main.js，第三方库vendor.js，各类插件plugins.js
 页面顺序为vendor>plugins>main
 使用gulp-uglify压缩和gulp-babel转换为ES5
+使用flexible.js处理移动端问题，用了px2rem插件，编译less时可以自动把px转换为rem，可在gulpfile.js里配置
 #### 3.image
 使用gulp-image-min进行图片压缩，压缩率感人，如果图片过大还是推荐手动使用各类在线图片压缩网站或者压缩软件
 #### 4.本地开发

@@ -13,7 +13,7 @@ font-size:0;letter-spacing:-4px;
 ```
 然后设置子元素正常的font-size和letter-spacing;
 
-#### 2、移动端JS给页面设置scrollTop出现闪屏问题
+#### 2、移动端JS给页面设置scrollTop出现闪屏问题，移动端IOS safari浏览器，某些情况下页面无法滑动
 给body加上属性：
 ```
 -webkit-overflow-scrolling: touch;
@@ -49,28 +49,22 @@ background-size: 100% 100%;
 #### 8、移动端IOS safari浏览器，给div绑定点击事件，出现页面未响应
 把div改为a标签，并加上href属性
 
-#### 9、移动端IOS safari浏览器，某些情况下页面无法滑动
-给滑动元素或者其父级元素添加
-```
--webkit-overflow-scrolling: touch;
-```
-
-#### 10、overflow：hidden可能会影响移动端界面滑动不流畅
+#### 9、overflow：hidden可能会影响移动端界面滑动不流畅
 尽量少用，或可以使用iScroll插件;
 
-#### 11、某些安卓手机自带浏览器 fixed 底部遮住页面
+#### 10、某些安卓手机自带浏览器 fixed 底部遮住页面
 在被遮住的层的最大父级容器 加上
 ```
 padding-bottom: 1px
 ```
 
-#### 12、在line-heigth：1 手机页看  文字会被截取一端
+#### 11、在line-heigth：1 手机页看  文字会被截取一端
 可以在全局加上
 ```
 padding:1px；
 ```
 
-#### 13、安卓和ios文字上下居中不一样，安卓会向上2px
+#### 12、安卓和ios文字上下居中不一样，安卓会向上2px
 可判断出安卓系统后，再需要居中的文本加上
 ```
 padding-top：2px；
