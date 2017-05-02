@@ -5,6 +5,7 @@ tags: webpack, vue
 ---
 
 学习webpack和vue的过程中，搭建了一个简单的前端开发脚手架，分享一下开发经验。
+github地址：[webpack-vue-tool](https://github.com/ZickCode/webpack-vue-tool)
 
 #### 1、安装nodejs v5.0+到本地。
 #### 2、全局安装webpack。
@@ -85,7 +86,7 @@ cnpm i
 #### 6、然后来配置webpack.config.js。
 ```
 //path对象，webpack对象
-var path = require('path')
+var path = require('path'),
     webpack = require('webpack');
 
 module.exports = {
@@ -110,8 +111,8 @@ module.exports = {
         //处理.vue单文件组件里面的sass
         options: {
           loaders: {
-            'scss': 'vue-style-loader!css-loader!sass-loader',
-            'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax'
+            'scss': 'vue-style-loader!css-loader!autoprefixer-loader?browsers=last 4 version!sass-loader',
+            'sass': 'vue-style-loader!css-loader!autoprefixer-loader?browsers=last 4 version!sass-loader?indentedSyntax'
           }
         }
       },
@@ -124,7 +125,7 @@ module.exports = {
       //使用autoprefixer处理css兼容
       { 
         test: /\.css$/,
-        loader: 'style-loader!css-loader!autoprefixer-loader?browsers=last 2 version'
+        loader: 'style-loader!css-loader!autoprefixer-loader?browsers=last 4 version'
       },
       //处理图片并加上hash防止缓存
       {
@@ -139,7 +140,12 @@ module.exports = {
   //插件配置
   plugins: [
     //webpack热替换
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    //引入jquery
+    new webpack.ProvidePlugin({
+      jQuery: "jquery",
+      $: "jquery"
+    })
   ],
   //开发服务器配置
   devServer: {
@@ -147,9 +153,10 @@ module.exports = {
     noInfo: false,
     hot: true,
     inline: true,
-    port: 8000
+    port: 8000,
+    open: true
   },
-  //加快webpack编译速度
+  //控制打包的文件大小
   performance: {
     hints: false
   },
